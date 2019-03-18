@@ -57,3 +57,4 @@ Date:   Thu Mar 14 14:37:34 2019 +0200
  teksti.txt | 1 +
  1 file changed, 1 insertion(+)
 
+Tama teksti ei kuulu tanne
