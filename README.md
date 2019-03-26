@@ -1,3 +1,14 @@
+# Ponglike
+
+Jatkettu versio klassikkopelistä Pong
+
+## Dokumentaatio
+
+[vaatimusmaarittely.md](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+
+
+
 # ot-harjoitustyo
 
 ## Viikko1
