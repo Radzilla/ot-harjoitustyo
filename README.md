@@ -1,8 +1,8 @@
-#Ponglike
+# Ponglike
 
 Jatkettu versio klassikkopelistä Pong
 
-##Dokumentaatio
+## Dokumentaatio
 
 [vaatimusmaarittely.md](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
