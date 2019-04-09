@@ -8,6 +8,20 @@ Jatkettu versio klassikkopelistä Pong
 
 [Tuntikirjanpito](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito)
 
+## Releaset
+
+## Komentorivitoiminnot
+
+### Testit suoritetaan komennolla
+
+mvn test
+
+## Testikattavuusraportti luodaan komennolla
+
+mvn jacoco:report
+
+## Checkstyle
+
 
 
 
