@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import fi.sillaras.components.Paddle;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -17,7 +18,7 @@ import static org.junit.Assert.*;
  */
 public class PongTest {
 
-    PlayersPaddle paddle1;
+    Paddle paddle1;
 
     public PongTest() {
     }
@@ -32,7 +33,9 @@ public class PongTest {
 
     @Before
     public void setUp() {
-        paddle1 = new PlayersPaddle();
+        int x= 10;
+        int y= 720;
+        paddle1 = new Paddle(x,y);
     }
 
     @After
@@ -49,7 +52,7 @@ public class PongTest {
 
     @Test
     public void parameterlessConstructorSetsSpeed() {
-        assertEquals(5, paddle1.getSpeed());
+        assertEquals(0, paddle1.getSpeed());
     }
     @Test
     public void parameterlessConstructorSetsFriction() {
