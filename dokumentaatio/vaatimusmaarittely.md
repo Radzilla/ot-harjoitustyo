@@ -18,7 +18,8 @@ Pongia ohjataan nuolilla tai W/D. Lisäominaisuudet saattavat lisätä tarvittav
 
 
 ## Toiminnalisuus
-
+Pelaajalla on oma maila jolla on ominaisuuksia
+Pelissä on myös pallo joka saa ainakin nopeuden ja suunnan ja ehkä myöhemmin muita ominaisuuksia
 Pelissä pelataan erilaisia vastustajia vastaan ja vastustajien välissä saadaan pisteitä/ponginkehitystä. Vastustajat muuttuvat vaikeammiksi ja parannellut ominaisuudet auttavat näitä vastaan.
 Vielä tässä vaiheessa ei ole täysin selkeää tuleeko pelistä roguelike tyylinen eli hävitessä peli alkaa alusta vai voiko kehitystä tallentaa.
 
