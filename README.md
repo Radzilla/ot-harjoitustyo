@@ -29,6 +29,10 @@ mvn jacoco:report
 
 ## Checkstyle
 
+[checkstyle.xml](https://github.com/Radzilla/ot-harjoitustyo/blob/master/Pong/checkstyle.xml) määritellyt tarkistukset suoritetaan komennolla 
 
+```
+ mvn jxr:jxr checkstyle:checkstyle
+```
 
 
