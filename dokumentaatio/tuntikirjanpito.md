@@ -3,6 +3,8 @@
 | Päivä | Aika | Mitä tein  |
 | :----:|:-----| :-----|
 | 26.3. | 3    | Projektin valinta ja ominaisuuksien pohdinta |
-| 02.2. | 3    | JavaFXn toiminnan muistelu ja luokkien aloittaminen |
-| 09.2. | 4    | Checkstylen ja jacocon ihmettelyä. Mailojen liikkumaan saaminen |
-| yht | 1o | | 
+| 02.4. | 3    | JavaFXn toiminnan muistelu ja luokkien aloittaminen |
+| 09.4. | 4    | Checkstylen ja jacocon ihmettelyä. Mailojen liikkumaan saaminen |
+| 12.4. | 3    | Törmäämisen laskeminen |
+| 16.4. | 4    | Pisteytystä ja vastustajan mailan automatisoiminen. Käyttöliittymän parantaminen |
+| yht | 17 | | 
