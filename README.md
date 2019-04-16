@@ -12,7 +12,7 @@ Jatkettu versio klassikkopelistä Pong
 
 ## Releaset
 
-[Pong Viikko 5](https://github.com/Radzilla/ot-harjoitustyo/blob/master/Pong/Pong-1.0-SNAPSHOT.jar)
+[Pong Viikko 5](https://github.com/Radzilla/ot-harjoitustyo/releases)
 
 
 ## Komentorivitoiminnot
