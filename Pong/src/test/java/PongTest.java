@@ -5,6 +5,7 @@
  */
 
 import fi.sillaras.components.Paddle;
+import fi.sillaras.components.Ball;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -19,6 +20,7 @@ import static org.junit.Assert.*;
 public class PongTest {
 
     Paddle paddle1;
+    Ball ball1;
 
     public PongTest() {
     }
@@ -33,29 +35,44 @@ public class PongTest {
 
     @Before
     public void setUp() {
-        int x= 10;
-        int y= 720;
-        paddle1 = new Paddle(x,y);
+        int x = 10;
+        int y = 720;
+        paddle1 = new Paddle(x, y);
+        ball1 = new Ball(20, y / 2);
     }
 
     @After
     public void tearDown() {
     }
+
     @Test
     public void parameterlessConstructorSetsSize() {
         assertEquals(100, paddle1.getSize());
     }
+
     @Test
     public void parameterlessConstructorSetsPower() {
-        assertEquals(5, paddle1.getPower());
+        assertEquals(3, paddle1.getPower());
     }
 
     @Test
     public void parameterlessConstructorSetsSpeed() {
         assertEquals(0, paddle1.getSpeed());
     }
+
     @Test
     public void parameterlessConstructorSetsFriction() {
         assertEquals(1, paddle1.getFriction());
+    }
+
+    @Test
+    public void parameterlessConstructorSetsBallSpeed() {
+        assertEquals(2, ball1.getSpeedX());
+    }
+
+    @Test
+    public void BallSetSpeed() {
+        ball1.ballSetSpeed(3, 2);
+        assertEquals(4, ball1.getSpeedX());
     }
 }
