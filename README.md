@@ -8,6 +8,8 @@ Jatkettu versio klassikkopelistä Pong
 
 [Tuntikirjanpito](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito)
 
+[Arkkitehtuurikuvaus](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/Pong_luokkakaavio.pdf)
+
 ## Releaset
 
 [Pong Viikko 5](https://github.com/Radzilla/ot-harjoitustyo/blob/master/Pong/Pong-1.0-SNAPSHOT.jar)
