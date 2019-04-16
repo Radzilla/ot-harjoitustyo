@@ -29,6 +29,13 @@ mvn test
 mvn jacoco:report
 ```
 
+## Suoritettavan jarin generointi
+
+```
+mvn package
+```
+generoi hakemistoon target suoritettavan jar tiedoston Pong-1.0-SNAPSHOT.jar
+
 ## Checkstyle
 
 [checkstyle.xml](https://github.com/Radzilla/ot-harjoitustyo/blob/master/Pong/checkstyle.xml) määritellyt tarkistukset suoritetaan komennolla 
@@ -36,5 +43,6 @@ mvn jacoco:report
 ```
  mvn jxr:jxr checkstyle:checkstyle
 ```
+
 
 
