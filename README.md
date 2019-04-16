@@ -6,7 +6,7 @@ Jatkettu versio klassikkopelistä Pong
 
 [vaatimusmaarittely](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[Tuntikirjanpito](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito)
+[Tuntikirjanpito](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 [Arkkitehtuurikuvaus](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/Pong_luokkakaavio.pdf)
 
