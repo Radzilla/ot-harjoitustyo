@@ -34,21 +34,22 @@ public class Pong extends Application {
 
         int x = 1280;
         int y = 720;
-        int score1 = 0;
-        int score2 = 0;
+        
+        
+        
+        //Pane screen = new Pane();
 
-        Pane screen = new Pane();
-
-        screen.setPrefSize(x, y);
+        //screen.setPrefSize(x, y);
         Paddle paddle1 = new Paddle(10, y);
         paddle1.setSpeed(1);
         Paddle paddle2 = new Paddle(x - 10, y);
         Ball ball1 = new Ball(10 + paddle1.getPower(), y / 2);
+        Scenes scenes = new Scenes(x, y, paddle1, paddle2, ball1, stage);
 
-        Scene scene = new Scene(screen);
-        stage.setTitle("Score: " + paddle1.getScore() + " - " + paddle2.getScore());
+        //Scene scene = new Scene(screen);
+        stage.setTitle("Score: " + scenes.paddle1.getScore() + " - " + scenes.paddle2.getScore());
 
-        BorderPane instructionsScreen = new BorderPane();
+        /*BorderPane instructionsScreen = new BorderPane();
         instructionsScreen.setPrefSize(x, y);
         Label instructionsLabel = new Label("Press UP and DOWN arrows to move paddle. \n"
                 + "Ball gets sideway movement from paddles movement so move paddle when ball touches it to start. \n"
@@ -58,17 +59,22 @@ public class Pong extends Application {
         okButton.setOnAction((event) -> {
             stage.setScene(scene);
         });
+        
         instructionsScreen.setTop(instructionsLabel);
         instructionsScreen.setCenter(okButton);
         Scene instructionsScene = new Scene(instructionsScreen);
 
-        stage.setScene(instructionsScene);
+        stage.setScene(instructionsScene);*/
+        
+        
+        Scene instScene = scenes.getInstructionsScene();
+        stage.setScene(instScene);
 
-        screen.getChildren().add(paddle1.getPaddle());
+        /*screen.getChildren().add(paddle1.getPaddle());
         screen.getChildren().add(paddle2.getPaddle());
-        screen.getChildren().add(ball1.getBall());
+        screen.getChildren().add(ball1.getBall());*/
 
-        BorderPane optionScreen = new BorderPane();
+        /*BorderPane optionScreen = new BorderPane();
         optionScreen.setPrefSize(x, y);
 
         Label victoryLabel = new Label("You won! Choose your reward.");
@@ -103,17 +109,18 @@ public class Pong extends Application {
 
         lostScreen.setTop(lostLabel);
         lostScreen.setCenter(lostButton);
-        Scene lostScene = new Scene(lostScreen);
+        Scene lostScene = new Scene(lostScreen);*/
 
         stage.show();
+        
 
         Map<KeyCode, Boolean> pressedButton = new HashMap<>();
 
-        scene.setOnKeyPressed(event -> {
+        scenes.getGameScene().setOnKeyPressed(event -> {
             pressedButton.put(event.getCode(), Boolean.TRUE);
         });
 
-        scene.setOnKeyReleased(event -> {
+        scenes.getGameScene().setOnKeyReleased(event -> {
             pressedButton.put(event.getCode(), Boolean.FALSE);
         });
 
@@ -122,42 +129,42 @@ public class Pong extends Application {
             @Override
             public void handle(long now) {
                 if (pressedButton.getOrDefault(KeyCode.UP, false)) {
-                    paddle1.speedUp();
+                    scenes.paddle1.speedUp();
                 }
                 if (pressedButton.getOrDefault(KeyCode.DOWN, false)) {
-                    paddle1.speedDown();
+                    scenes.paddle1.speedDown();
                 }
 
-                if (paddle2.getPaddle().getTranslateY() > ball1.getBall().getTranslateY()) {
-                    paddle2.speedUp();
+                if (scenes.paddle2.getPaddle().getTranslateY() > scenes.ball1.getBall().getTranslateY()) {
+                    scenes.paddle2.speedUp();
                 }
-                if (paddle2.getPaddle().getTranslateY() < ball1.getBall().getTranslateY()) {
-                    paddle2.speedDown();
+                if (scenes.paddle2.getPaddle().getTranslateY() < scenes.ball1.getBall().getTranslateY()) {
+                    scenes.paddle2.speedDown();
                 }
 
-                paddle1.move(y);
-                paddle2.move(y);
-                ball1.move(y);
+                scenes.paddle1.move(y);
+                scenes.paddle2.move(y);
+                scenes.ball1.move(y);
 
-                if (ball1.collide(paddle1)) {
-                    ball1.ballSetSpeed(paddle1.getPower(), paddle1.getSpeed());
+                if (scenes.ball1.collide(scenes.paddle1)) {
+                    scenes.ball1.ballSetSpeed(scenes.paddle1.getPower(), scenes.paddle1.getSpeed());
                 }
-                if (ball1.collide(paddle2)) {
-                    ball1.ballSetSpeed(-paddle2.getPower(), paddle2.getSpeed());
+                if (scenes.ball1.collide(scenes.paddle2)) {
+                    scenes.ball1.ballSetSpeed(-scenes.paddle2.getPower(), scenes.paddle2.getSpeed());
                 }
                 if (ball1.getBall().getTranslateX() < -10) {
-                    paddle2.setScore(paddle2.getScore() + 1);
-                    stage.setTitle("Score: " + paddle1.getScore() + " - " + paddle2.getScore());
-                    ball1.getBall().setTranslateX(-10);
-                    ball1.ballSetSpeed(-ball1.getSpeedX(), 0);
+                    scenes.paddle2.setScore(scenes.paddle2.getScore() + 1);
+                    stage.setTitle("Score: " + scenes.paddle1.getScore() + " - " + scenes.paddle2.getScore());
+                    scenes.ball1.getBall().setTranslateX(-10);
+                    scenes.ball1.ballSetSpeed(-scenes.ball1.getSpeedX(), 0);
                     if (paddle2.getScore() >= 3) {
-                        ball1.ballSetSpeed(0, 0);
-                        ball1.getBall().setTranslateY(0);
-                        paddle1.getPaddle().setTranslateY(0);
-                        paddle2.getPaddle().setTranslateY(0);
-                        paddle2.setScore(0);
-                        paddle1.setScore(0);
-                        stage.setScene(lostScene);
+                        scenes.ball1.ballSetSpeed(0, 0);
+                        scenes.ball1.getBall().setTranslateY(0);
+                        scenes.paddle1.getPaddle().setTranslateY(0);
+                        scenes.paddle2.getPaddle().setTranslateY(0);
+                        scenes.paddle2.setScore(0);
+                        scenes.paddle1.setScore(0);
+                        //stage.setScene(lostScene);
                         stage.show();
                     }
                 }
@@ -174,7 +181,7 @@ public class Pong extends Application {
                         paddle2.getPaddle().setTranslateY(0);
                         paddle2.setScore(0);
                         paddle1.setScore(0);
-                        stage.setScene(optionScene);
+                        //stage.setScene(optionScene);
                         stage.show();
                     }
                 }
