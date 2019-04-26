@@ -5,20 +5,32 @@
 Ohjelman rakenteessa on vain pakkaukset fi.sillaras.funktionality ja fi.sillaras.components.
 
 
-Paukkauksessa fi.sillaras.funktionality on sovelluksen käyttäliittymän ja sovelluslogikkan toteuttava luokka Pong, sekä luokka Scenenes jonka tarkoitus olisi onnistuessaan .nnetta pinenpiin metodeihin 
+Paukkauksessa fi.sillaras.funktionality on sovelluksen käyttäliittymän ja sovelluslogikkan toteuttava luokka Pong, sekä luokka Scenenes jonka tarkoitus olisi onnistuessaan siirtää näkymien luominen omiksi metodeikseen.
 
 Paukkauksessa fi.sillaras.components sisältää luokat Paddle ja Ball, jotka huolehtivat pelivälineiden luonnista.
 
 ## Käyttöliittymä
 
-Pelissä on neljä näkymää asd
+Pelissä on neljä näkymää 
 
-Pelin pelaamiseen annetaan ohjeita ennen pelin alkua ja peli aloitetaan painamalla Start game painiketta
+Ohjenäkymä
+Peliruutu
+Päivityksen valinta
+Pelin häviäminen ja uuden aloitus
 
+Nämä on toteutettu Scene olioina ja yksi kerrallaan näkyvä Scene siirretään sovelluksen stageen. 
 
+Ohjenäkymän, päivityksen valinta ja uuden pelin aloittaminen on toteutettu painikkeiden avulla.
+Pelattavaa peliruutua käytetään nuolinäppäinten avulla.
 
 ## Sovelluslogiikka
 
+Sovelluslogiikka pystyy muuttamaan pallon ja pelaajien mailojen tietoja, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit. 
+
+Sovelluslogiikassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa komponentteja peliruudussa näiden perusteella. 
 
 
-## Ongelmat
+## Ongelmat koodissa
+
+Käyttöliittymää ja sovelluslogiikaa ei olla saatu eroteltua toistaan ja näkyminen ohjaaminen Scenes olion kautta osoittautui hankalaksi. 
+Säilytetään kuitenkin Scenes olio jatkokehittelyä ajatellen.
