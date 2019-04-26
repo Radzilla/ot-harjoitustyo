@@ -7,7 +7,9 @@ Ohjelman rakenteessa on vain pakkaukset fi.sillaras.funktionality ja fi.sillaras
 
 Paukkauksessa fi.sillaras.funktionality on sovelluksen käyttäliittymän ja sovelluslogikkan toteuttava luokka Pong, sekä luokka Scenenes jonka tarkoitus olisi onnistuessaan siirtää näkymien luominen omiksi metodeikseen.
 
-Paukkauksessa fi.sillaras.components sisältää luokat Paddle ja Ball, jotka huolehtivat pelivälineiden luonnista.
+Paukkauksessa fi.sillaras.components sisältää luokat Paddle ja Ball, jotka huolehtivat pelivälineiden luonnista ja tuonnista peliruutuun.
+
+<img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pong_Luokkakaavio.png">
 
 ## Käyttöliittymä
 
