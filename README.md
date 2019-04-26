@@ -8,7 +8,7 @@ Jatkettu versio klassikkopelistä Pong
 
 [Tuntikirjanpito](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-[Arkkitehtuurikuvaus](https://github.com/Radzilla/ot-harjoitustyo/edit/master/dokumentaatio/arkkitehtuuri.md)
+[Arkkitehtuurikuvaus](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 ## Releaset
 
