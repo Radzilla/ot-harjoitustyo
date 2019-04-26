@@ -25,7 +25,9 @@ Pelattavaa peliruutua käytetään nuolinäppäinten avulla.
 
 ## Sovelluslogiikka
 
-Sovelluslogiikka pystyy muuttamaan pallon ja pelaajien mailojen tietoja, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit. 
+Sovelluslogiikka pystyy luomaan ja muuttamaan pallon ja pelaajien mailojen tietoja, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit. 
+
+<img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pelinakyma_Sekvenssi.PNG">
 
 Sovelluslogiikassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa komponentteja peliruudussa näiden perusteella. 
 
