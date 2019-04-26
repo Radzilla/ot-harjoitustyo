@@ -14,12 +14,24 @@ import javafx.geometry.Point2D;
 
 import javafx.animation.AnimationTimer;
 
+/**
+ * Paddlen avulla luodaan pelaajien mailat ominaisuuksiseen ja se tarjoaa
+ * metodit tiedon välittämiseksi myös itse sovelluslogiikalle
+ */
 public class Paddle {
 
     private Rectangle paddle;
-    private Point2D movement;
-    private int size, power, acceleration, speed, friction, posX, posY, height, score;
 
+    private Point2D movement;
+    private int size, power, acceleration, speed, posX, posY, height, score;
+
+    /**
+     * Konstruktori luo mailat oletusominaisuuksilla ja sijoittaa ne ruudun
+     * keskelle Maila sijoitetaan luodun peliruudun koon mukaan.
+     *
+     * @param posX Parametrina saatu peliruudun leveys
+     * @param posY Parametrina saatu peliruudun korkeus
+     */
     public Paddle(int posX, int posY) {
 
         this.score = 0;
@@ -27,7 +39,6 @@ public class Paddle {
         this.power = 3;
         this.acceleration = 3;
         this.speed = 0;
-        this.friction = 1;
         this.posX = posX;
         this.posY = posY / 2 - this.size / 2;
         this.height = posY;
@@ -35,6 +46,11 @@ public class Paddle {
         this.paddle = new Rectangle(this.posX, this.posY, this.power, this.size);
     }
 
+    /**
+     * Metodin avulla saadaan tuotua luotu maila peliruuttuun
+     *
+     * @return palauttaa mailan geometrisena suorakulmiona
+     */
     public Rectangle getPaddle() {
         return this.paddle;
     }
@@ -54,15 +70,15 @@ public class Paddle {
     public int getSpeed() {
         return this.speed;
     }
-
-    public int getFriction() {
-        return this.friction;
+    
+    public void setPower() {
+        this.power++;
     }
 
-    /*public void setSize(int change) {
+    public void setSize(int change) {
         this.size = this.size + change;
-        this.paddle.setSize(this.size, this.speed);
-    }*/
+    }
+
     public void setSpeed(int change) {
         this.acceleration = this.acceleration + change;
     }
@@ -70,17 +86,28 @@ public class Paddle {
     public void setScore(int score) {
         this.score = score;
     }
-
+    /**
+     * Metodi kiihdyttää mailoja ylöspäin
+     */
     public void speedUp() {
         this.speed = this.speed - this.acceleration;
 
     }
 
+    /**
+     * Metodi kiihdyttää mailoja alaspäin
+     */
     public void speedDown() {
         this.speed = this.speed + this.acceleration;
 
     }
 
+    /**
+     * Paddlen metodi move liikuttaa mailoja annetujen komentojen perusteellaa
+     * ja tarkistaa etteivät mailat pääse peliruudun ulkopuoelle
+     *
+     * @param y parametrina saadaan peliruudun korkeus
+     */
     public void move(int y) {
 
         this.speed = this.speed / 2;

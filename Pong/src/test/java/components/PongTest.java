@@ -62,10 +62,7 @@ public class PongTest {
         assertEquals(0, paddle1.getSpeed());
     }
 
-    @Test
-    public void parameterlessConstructorSetsFriction() {
-        assertEquals(1, paddle1.getFriction());
-    }
+    
 
     @Test
     public void parameterlessConstructorSetsBallSpeed() {
