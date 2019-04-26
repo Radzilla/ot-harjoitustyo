@@ -7,4 +7,6 @@
 | 09.4. | 4    | Checkstylen ja jacocon ihmettelyä. Mailojen liikkumaan saaminen. Arkkitehtuurikuvauksen aloitus |
 | 12.4. | 3    | Mailan ja pallon törmäämisen tulkinta |
 | 16.4. | 6    | Pisteytystä ja vastustajan mailan automatisoiminen. Käyttöliittymän rakentelu. POMin muokkaus |
-| yht | 19 | | 
+| 25.4. | 3    | Yritetty tuloksetta pilkkoa Pong luokkaa nakymista huolihtivat Scenes luokan avulla. POM korjaaminen|
+| 26.4. | 6    | Arkkitehtuurikuvauksen aloittelu.|
+| yht | 28 | | 
