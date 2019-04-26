@@ -8,5 +8,5 @@
 | 12.4. | 3    | Mailan ja pallon törmäämisen tulkinta |
 | 16.4. | 6    | Pisteytystä ja vastustajan mailan automatisoiminen. Käyttöliittymän rakentelu. POMin muokkaus |
 | 25.4. | 3    | Yritetty tuloksetta pilkkoa Pong luokkaa nakymista huolihtivat Scenes luokan avulla. POM korjaaminen|
-| 26.4. | 6    | Arkkitehtuurikuvauksen aloittelu.|
+| 26.4. | 6    | Arkkitehtuurikuvauksen ja ohjeiden aloittelu. JavaDoc opettelu mutta luonti ei onnistunut JAVA_HOME takia.|
 | yht | 28 | | 
