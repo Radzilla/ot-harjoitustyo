@@ -10,6 +10,7 @@ Paukkauksessa fi.sillaras.funktionality on sovelluksen käyttäliittymän ja sov
 Paukkauksessa fi.sillaras.components sisältää luokat Paddle ja Ball, jotka huolehtivat pelivälineiden luonnista ja tuonnista peliruutuun.
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pong_Luokkakaavio.png">
+Kuvassa Pong luoka on Screens osoittamassa erilaisten ruutujen/näkymien hallintaa.
 
 ## Käyttöliittymä
 
@@ -27,14 +28,21 @@ Pelattavaa peliruutua käytetään nuolinäppäinten avulla.
 
 ## Sovelluslogiikka
 
-Sovelluslogiikka pystyy luomaan ja muuttamaan pallon ja pelaajien mailojen tietoja, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit. 
+Luokka Pong vastaa käyttöliittymän erilaisten näkymien luonnista ja näyttämisestä käyttäjälle. 
+
+Pong pystyy myös luomaan ja muuttamaan pallon ja pelaajien mailojen tietoja, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit muotoina. 
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pelinakyma_Sekvenssi.PNG">
 
-Sovelluslogiikassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa komponentteja peliruudussa näiden perusteella. 
+Pong luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa komponentteja peliruudussa näiden perusteella kymmeniä kertoja sekunnissa. 
+
 
 
 ## Ongelmat koodissa
 
-Käyttöliittymää ja sovelluslogiikaa ei olla saatu eroteltua toistaan ja näkyminen ohjaaminen Scenes olion kautta osoittautui hankalaksi. 
+Käyttöliittymää ja sovelluslogiikaa ei olla saatu eroteltua toistaan, sillä näkyminen ohjaaminen Scenes olion kautta osoittautui hankalaksi. 
 Säilytetään kuitenkin Scenes olio jatkokehittelyä ajatellen.
+
+Vastustajan muuttaminen erkittävästi erilaiseksi ei oikein toimi, sillä jos vastustajan maila on kovin nopea tai leveä, pisteiden tekemisestä tulee mahdotonta. Vastustajan voimaa kasvattamalla saadaan kuitenkin hyvää lisähaastetta pallon ja sitä kautta pelin nopeutuessa.
+
+Pallon nopeuden muuttuminen kierteen perusteella toimii, mutta ainakin int arvoilla Y suuntaisen nopeuden kasvu on liian nopeaa, ellei sitä rajoiteta. Animation timerin ruudunpäivitysnopeutta saisi varmaan hidastettua, mutta pelin sulavuus kärsisi.
