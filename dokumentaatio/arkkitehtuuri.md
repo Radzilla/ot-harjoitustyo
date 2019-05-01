@@ -10,7 +10,7 @@ Paukkauksessa fi.sillaras.funktionality on sovelluksen käyttäliittymän ja sov
 Paukkauksessa fi.sillaras.components sisältää luokat Paddle ja Ball, jotka huolehtivat pelivälineiden luonnista ja tuonnista peliruutuun.
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pong_Luokkakaavio.png">
-Kuvassa Pong luoka on Screens osoittamassa erilaisten ruutujen/näkymien hallintaa.
+Kuvassa Pong luoka on Screen osoittamassa erilaisten ruutujen/näkymien hallintaa.
 
 ## Käyttöliittymä
 
@@ -40,8 +40,7 @@ Pong luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuo
 
 ## Ongelmat koodissa
 
-Käyttöliittymää ja sovelluslogiikaa ei olla saatu eroteltua toistaan, sillä näkyminen ohjaaminen Scenes olion kautta osoittautui hankalaksi. 
-Säilytetään kuitenkin Scenes olio jatkokehittelyä ajatellen.
+Käyttöliittymää ja sovelluslogiikaa ei olla saatu eroteltua toistaan, sillä näkyminen ohjaaminen ja animation timerin käyttö tätä varten luodun Scenes luokan kautta osoittautui liian monimutkaiseksi itselleni. Näin ollen suuri osa koodista jäi useamman metodin sijaan hieman epäselväksi pötköksi.
 
 Vastustajan muuttaminen erkittävästi erilaiseksi ei oikein toimi, sillä jos vastustajan maila on kovin nopea tai leveä, pisteiden tekemisestä tulee mahdotonta. Vastustajan voimaa kasvattamalla saadaan kuitenkin hyvää lisähaastetta pallon ja sitä kautta pelin nopeutuessa.
 
