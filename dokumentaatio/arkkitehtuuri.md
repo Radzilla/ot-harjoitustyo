@@ -14,33 +14,33 @@ Kuvassa Pong luoka on Screen osoittamassa erilaisten ruutujen/näkymien hallinta
 
 ## Käyttöliittymä
 
-Pelissä on neljä näkymää 
+Pelin käyttöliittymä on kokonaan graafinen ja se koostuu neljästä näkymästä
 
 Ohjenäkymä
 Peliruutu
 Päivityksen valinta
-Pelin häviäminen ja uuden aloitus
+Pelin häviäminen
 
-Nämä on toteutettu Scene olioina ja yksi kerrallaan näkyvä Scene siirretään sovelluksen stageen. 
+Nämä on toteutettu JavaFX:n valmiina Scene olioina ja näytettävä Scene siirretään sovelluksen Stageen. 
 
 Ohjenäkymän, päivityksen valinta ja uuden pelin aloittaminen on toteutettu painikkeiden avulla.
 Pelattavaa peliruutua käytetään nuolinäppäinten avulla.
 
 ## Sovelluslogiikka
 
-Luokka Pong vastaa käyttöliittymän erilaisten näkymien luonnista ja näyttämisestä käyttäjälle. 
+Luokka Pong vastaa käyttöliittymän erilaisten näkymien luonnista ja näyttämisestä käyttäjälle, sekä niiden välillä siirtymisestä. 
 
-Pong pystyy myös luomaan ja muuttamaan pallon ja pelaajien mailojen tietoja, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit muotoina. 
+Pong pystyy myös luomaan ja muuttamaan pallon ja pelaajien mailojen tietoja, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit muotoina. Alla olevassa kuvassa oleva sekvenssikaavio esittää peliruudun luomista.
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pelinakyma_Sekvenssi.PNG">
 
-Pong luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa komponentteja peliruudussa näiden perusteella kymmeniä kertoja sekunnissa. 
+Pong luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa peliruudun luomisen yhteydessä luotuja komponentteja peliruudussa ohjeistetulla tavalla kymmeniä kertoja sekunnissa. 
 
 
 
 ## Ongelmat koodissa
 
-Käyttöliittymää ja sovelluslogiikaa ei olla saatu eroteltua toistaan, sillä näkyminen ohjaaminen ja animation timerin käyttö tätä varten luodun Scenes luokan kautta osoittautui liian monimutkaiseksi itselleni. Näin ollen suuri osa koodista jäi useamman metodin sijaan hieman epäselväksi pötköksi.
+Käyttöliittymää ja sovelluslogiikaa ei olla saatu eroteltua toistaan, sillä näkyminen ohjaaminen ja animation timerin käyttö tätä varten itse luodun Scenes luokan kautta osoittautui liian monimutkaiseksi. Näin ollen suuri osa koodista jäi useamman metodin sijaan pitkäksi kokonaisuudeksi.
 
 Vastustajan muuttaminen erkittävästi erilaiseksi ei oikein toimi, sillä jos vastustajan maila on kovin nopea tai leveä, pisteiden tekemisestä tulee mahdotonta. Vastustajan voimaa kasvattamalla saadaan kuitenkin hyvää lisähaastetta pallon ja sitä kautta pelin nopeutuessa.
 
