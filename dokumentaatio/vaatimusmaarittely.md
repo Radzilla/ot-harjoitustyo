@@ -2,32 +2,31 @@
 # Vaatimusmaarittely
 ## Sovelluksen tarkoitus
 
-Tarkoituksena oli tehdä jatkettu  versio klassikkopeli pongista.
+Hieman jatkettu versio klassikkopeli pongista.
 
 ## Käyttäjät 
 
-Jos pelistä tehdään tallennuksen mahdollistava versio käyttäjä voidaan luoda peliä aloittaessa tai jatkaa jo luodulla.
-Pelissä on kuitenkin vain yksi pelaaja kerrallaan.
+Pelissä on yks käyttäjä kerrallaan joka ohjaa pelaajaa/mailaa 1. Pelissä on myös pelaaja 2 mutta tämä on tietokoneen ohjaama.
+
 
 ## Käyttöliittymä
 
 
-Pelin olisi tarkoitus näkyä käyttäjälle pelkästään graafisena.
-Jos tallennus on mahdollista, pelaajan tietoja  kysytään kentässä ennen pelin varsinaista alkamista. Peli aloitetaan painamalla nappia kun pelaaja on valmis.
-Pongia ohjataan nuolilla tai W/D. Lisäominaisuudet saattavat lisätä tarvittavia painikkeita.
+Peli näkyy käyttäjälle pelkästään graafisena.
+Käyttöliittymä koostuu yksinkertaisista hiirellä käytettävistä valikoista ja itse peliä pelataan ylös ja alas nuolinäppäimillä.
+Pelin päätyttyä pääsee myös tarkastelemaan pisteitä ja lisäämään omansa.
 
 
 ## Toiminnalisuus
-Pelaajalla on oma maila jolla on ominaisuuksia
-Pelissä on myös pallo joka saa ainakin nopeuden ja suunnan ja ehkä myöhemmin muita ominaisuuksia
-Pelissä pelataan erilaisia vastustajia vastaan ja vastustajien välissä saadaan pisteitä/ponginkehitystä. Vastustajat muuttuvat vaikeammiksi ja parannellut ominaisuudet auttavat näitä vastaan.
-Vielä tässä vaiheessa ei ole täysin selkeää tuleeko pelistä roguelike tyylinen eli hävitessä peli alkaa alusta vai voiko kehitystä tallentaa.
+Pelaajilla on oma maila, jolla on ominaisuuksia. Sitä vodiaan liikuttaa peliruudussa pelästään Y suunnassa.
+Pelissä on myös pallo joka saa peliruudussa nopeuden X ja Y suunnassa riippuen mailan voimasta ja liikkeestä osumishetkellä.
+Pelissä pelataan erilaisia vastustajia vastaan ja vastustajien välissä saadaan pisteitä ja ponginkehitystä. Vastustajat muuttuvat voimakaamaksi ja parannellut ominaisuudet auttavat näitä vastaan.
+
 
 
 ## Jatkokehitysidoita
 
-Erilaisten mailan ominaisuuksien luominen esim. mailan leveys, mailan nopeus, kierteen lyöminen palloon
-Ominaisuuksien kehityksen mahdollistava kauppa
-Erilaisten vastustajien luominen
-Tasokohtaisia erikoisuuksia
+Ominaisuuksien kehityksen mahdollistava kauppa. tällöin kehitystä ei saisi välttämättä joka tason jälkeen.
+Muun kuin voiman perusteella erilaisten vastustajien luominen.
+Tasokohtaisia erikoisuuksia kuten ylimääräisiä esteitä.
 
