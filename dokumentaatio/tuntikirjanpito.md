@@ -10,4 +10,6 @@
 | 25.4. | 3    | Yritetty tuloksetta pilkkoa Pong luokkaa nakymista huolihtivat Scenes luokan avulla. POM korjaaminen|
 | 26.4. | 6    | Arkkitehtuurikuvauksen ja ohjeiden aloittelu. JavaDoc opettelu mutta luonti ei onnistunut JAVA_HOME takia.|
 | 01.5. | 4    | Vaatimusmäärittelyn ja arkkitehtuurikuvauksen päivitys. JavaFX kirjasto katosi yllättäen ja yritetty korjata tuloksetta|
-| yht | 32 | | 
+| 02.5. | 4    | Käyty ajamssa päivitykset. JavaFX korjaantui ja NetBeanssin java versio vaihtamalla mavenkin toimii|
+| 03.5. | 4    | Pongiin lisätty tiedostoon tallentava Scores luokka|
+| yht | 40 | | 
