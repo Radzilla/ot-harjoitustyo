@@ -4,7 +4,9 @@ Jatkettu versio klassikkopelistä Pong
 
 ## Dokumentaatio
 
-[vaatimusmaarittely](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Kayttöohje](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
+[Vaatimusmäärittely](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Tuntikirjanpito](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
@@ -44,5 +46,11 @@ generoi hakemistoon target suoritettavan jar tiedoston Pong-1.0-SNAPSHOT.jar
  mvn jxr:jxr checkstyle:checkstyle
 ```
 
+## JavaDoc
 
+JavaDoc voidaan generoida komennolla
+
+```
+ mvn javadoc:javadoc
+```
 
