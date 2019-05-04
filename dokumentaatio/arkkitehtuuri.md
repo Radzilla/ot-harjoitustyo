@@ -10,7 +10,7 @@ Paukkauksessa fi.sillaras.funktionality on sovelluksen käyttäliittymän ja sov
 Paukkauksessa fi.sillaras.components sisältää luokat Paddle ja Ball, jotka huolehtivat pelivälineiden luonnista ja tuonnista peliruutuun.
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pong_Luokkakaavio.png">
-Kuvassa on alkuperäinen ajatus luokkien rakenteesta. Screensin nimi on vaihdettu Scenesiksi ja luokka Scores lisätty valmiiseen sovellukseen.
+Kuvassa on alkuperäinen ajatus luokkien rakenteesta. Screensin nimi on vaihdettu Scenesiksi ja luokka Scores lisätty valmiissa sovelluksessa.
 
 ## Käyttöliittymä
 
