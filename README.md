@@ -12,7 +12,7 @@ Jatkettu versio klassikkopelistä Pong
 
 [Arkkitehtuurikuvaus](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[Testausdokumentti] (https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
+[Testausdokumentti](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
 
 ## Releaset
 
