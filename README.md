@@ -33,6 +33,8 @@ mvn test
 mvn jacoco:report
 ```
 
+Generoi hakemistoon target/site/jacoco tiedoston index.html mistä voidaan tarkastella testikattavuutta
+
 ## Suoritettavan jarin generointi
 
 ```
@@ -56,3 +58,4 @@ JavaDoc voidaan generoida komennolla
  mvn javadoc:javadoc
 ```
 
+Generoi hakemistoon target/site/apidocs html tiedostoja joiden avulla nähdää sovelluksen API
