@@ -12,6 +12,8 @@ Jatkettu versio klassikkopelistä Pong
 
 [Arkkitehtuurikuvaus](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+[Testausdokumentti] (https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
+
 ## Releaset
 
 [Pong Viikko 5](https://github.com/Radzilla/ot-harjoitustyo/releases)
