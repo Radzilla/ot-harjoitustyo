@@ -11,5 +11,6 @@
 | 26.4. | 6    | Arkkitehtuurikuvauksen ja ohjeiden aloittelu. JavaDoc opettelu mutta luonti ei onnistunut JAVA_HOME takia.|
 | 01.5. | 4    | Vaatimusmäärittelyn ja arkkitehtuurikuvauksen päivitys. JavaFX kirjasto katosi yllättäen ja yritetty korjata tuloksetta|
 | 02.5. | 4    | Käyty ajamssa päivitykset. JavaFX korjaantui ja NetBeanssin java versio vaihtamalla mavenkin toimii|
-| 03.5. | 4    | Pongiin lisätty tiedostoon tallentava Scores luokka|
-| yht | 40 | | 
+| 03.5. | 4    | Pongiin lisätty tiedostoon tallentava Scores luokka. Pelin nollaantumista häviön jälkeen paranneltu|
+| 04.5. | 4    | Tiedon tallentamisen muutos konfiguraation määrrittelemäksi. Testien lisääminen ja pähkäily|
+| yht | 44 | | 
