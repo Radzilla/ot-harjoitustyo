@@ -18,13 +18,15 @@ Tarkoituksena on yrittää saada pisteitä lyömällä vastustajan takana olevaa
 ## Pelin aloitus
 
 
-Peli aloitusruudussa annetaan vielä lyhyet ohjeet pelin toimintaan ja Start game painiketta klikkaamalla siirrtyään varsinaiseen peliin.
+Peli aloitusruudussa annetaan vielä lyhyet ohjeet pelin toimintaan. 
+Aloitusruudussa on tekstikenttä mihin tulee syöttää 1-10 merkkiä pitkä nimimerkki ja Start game painiketta klikkaamalla siirrtyään varsinaiseen peliin.
 Aloitustilanteessa pallo liikkuu mailojen välillä ilman pystysuuntaista liikettä. 
 Palloon saa pystysuuntaista liikettä liikuttamalla mailaa sen osuessa palloon, jolloin myös vastustaja lähtee liikkeelle yrittäen seurata palloa.
 Käytännössä pallon pystyliikettä tarvitsee kasvattaa niin ettei vastustaja pysy perässä.
-Pelin voittaa se joka saa ensiksi 3 pistettä. 
+Erän voittaa se joka saa ensiksi 3 pistettä. 
+Erän voitettuasi voit kasvattaa mailan voimaa tai nopeutta. Vastustajasta tulee myös vahvempi.
 
 ## Pelin päättyminen
 
-Jos vastustaja voittaa peliä voidaan ytittää uudelleen painiketta klikkaamalla. 
-Jos pelaaja voittaa voit valita parannuksen mailaasi ja saat vastustajaksesi lujempaa lyövän mailan.
+Jos vastustaja voittaa, pääset näkemään parhaat tulokset. Peliä voidaan ytittää uudelleen painiketta klikkaamalla. 
+
