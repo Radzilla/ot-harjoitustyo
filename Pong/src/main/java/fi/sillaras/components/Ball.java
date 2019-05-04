@@ -9,7 +9,6 @@ package fi.sillaras.components;
  *
  * @author sillaras
  */
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.geometry.Point2D;
@@ -20,13 +19,16 @@ import javafx.geometry.Point2D;
  */
 public class Ball {
 
-    private int speedX, speedY, posX, posY, rotation;
+    private int speedX, speedY, posX, posY, rotation, round;
     private Rectangle ball;
+    private String name;
 
     public Ball(int posX, int posY) {
         this.speedX = 2;
         this.speedY = 0;
         this.rotation = 0;
+        this.round = 0;
+        this.name = "???";
         this.posX = posX;
         this.posY = posY;
         this.ball = new Rectangle(this.posX, this.posY, 10, 10);
@@ -35,21 +37,27 @@ public class Ball {
 
     /**
      * Metodin avulla saadaan tuotua luotu pallo peliruuttuun
+     *
      * @return palauttaa pallon geometrisena suorakulmiona
      */
     public Rectangle getBall() {
         return this.ball;
     }
 
+    /**
+     * Palauttaa pallon sivusuuntaisen nopeuden
+     * @return sivusuuntainen nopeus
+     */
     public int getSpeedX() {
         return this.speedX;
     }
 
     /**
      * Metodi collide tarkistaa mailan ja pallon yhteentörmäyksen
-     * @param paddle Törmääminen pitää tarkistaa kummankin mailan kanssa
-     * jotka annetaan parametrina
-     * @return 
+     *
+     * @param paddle Törmääminen pitää tarkistaa kummankin mailan kanssa jotka
+     * annetaan parametrina
+     * @return palauttaa tiedon törmäyksestä booleanina
      */
     public boolean collide(Paddle paddle) {
         Shape collision = Shape.intersect(this.ball, paddle.getPaddle());
@@ -57,11 +65,12 @@ public class Ball {
     }
 
     /**
-     * Kun pallo tormaa mailaan se saa uuden sivuttaissuuntaisen nopeuden
-     * mailan voiman mukaan ja sivuttaisliikkeen mailan sen hetkisestä
-     * liikkeestä tai seinään osuessaan hidastuu.
+     * Kun pallo tormaa mailaan se saa uuden sivuttaissuuntaisen nopeuden mailan
+     * voiman mukaan ja sivuttaisliikkeen mailan sen hetkisestä liikkeestä tai
+     * seinään osuessaan hidastuu.
+     *
      * @param speed
-     * @param newRotation 
+     * @param newRotation
      */
     public void ballSetSpeed(int speed, int newRotation) {
         this.speedX = this.speedX / 2 + speed;
@@ -77,7 +86,7 @@ public class Ball {
      * suunttaa oikeasa kohdassa.
      */
     public void move(int y) {
-        this.speedY = this.speedY/2 + this.rotation;
+        this.speedY = this.speedY / 2 + this.rotation;
 
         this.ball.setTranslateX(this.ball.getTranslateX() + this.speedX);
         this.ball.setTranslateY(this.ball.getTranslateY() + this.speedY);
@@ -85,10 +94,9 @@ public class Ball {
             this.ball.setTranslateY(-y / 2);
             this.rotation = -this.rotation;
         }
-        if (this.ball.getTranslateY() >= y / 2) {
-            this.ball.setTranslateY(y / 2);
+        if (this.ball.getTranslateY() >= y / 2 - 10) {
+            this.ball.setTranslateY(y / 2 - 10);
             this.rotation = -this.rotation;
         }
     }
-
 }

@@ -1,10 +1,5 @@
 package components;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 import fi.sillaras.components.Paddle;
 import fi.sillaras.components.Ball;
@@ -14,8 +9,9 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import javafx.scene.shape.Rectangle;
 
-/**
+/**Testit pelivälineille eli mailoille ja pallolle
  *
  * @author sillaras
  */
@@ -37,10 +33,10 @@ public class PongTest {
 
     @Before
     public void setUp() {
-        int x = 10;
+        int x = 1080;
         int y = 720;
-        paddle1 = new Paddle(x, y);
-        ball1 = new Ball(20, y / 2);
+        paddle1 = new Paddle(10, y);
+        ball1 = new Ball(20, y);
     }
 
     @After
@@ -61,8 +57,11 @@ public class PongTest {
     public void parameterlessConstructorSetsSpeed() {
         assertEquals(0, paddle1.getSpeed());
     }
-
     
+    /*@Test
+    public void parameterlessConstructorGetsRectangle() {
+        assertEquals(new Rectangle(20, 720/2-50, 3, 100), paddle1.getPaddle());
+    }*/
 
     @Test
     public void parameterlessConstructorSetsBallSpeed() {
@@ -73,5 +72,65 @@ public class PongTest {
     public void BallSetSpeed() {
         ball1.ballSetSpeed(3, 2);
         assertEquals(4, ball1.getSpeedX());
+    }
+    
+    @Test
+    public void PaddleSpeedUp() {
+        paddle1.speedUp();
+        assertEquals(-3, paddle1.getSpeed());
+    }
+    @Test
+    public void PaddleSpeedDown() {
+        paddle1.speedDown();
+        assertEquals(3, paddle1.getSpeed());
+    }
+    
+    @Test
+    public void PaddleAddSpeed() {
+        paddle1.addSpeed();
+        paddle1.speedUp();
+        assertEquals(-4, paddle1.getSpeed());
+    }
+    
+    @Test
+    public void PaddleResetSpeed() {
+        paddle1.addSpeed();
+        paddle1.resetSpeed();
+        paddle1.speedUp();
+        assertEquals(-3, paddle1.getSpeed());
+    }
+    
+    @Test
+    public void PaddleAddPower() {
+        paddle1.addPower();
+        assertEquals(4, paddle1.getPower());
+    }
+    
+   @Test
+    public void PaddleResetPower() {
+        paddle1.addPower();
+        paddle1.addPower();
+        paddle1.resetPower();
+        assertEquals(3, paddle1.getPower());
+    }
+    
+    @Test
+    public void PaddleaddSize() {
+        paddle1.addSize();
+        assertEquals(120, paddle1.getSize());
+    }
+    
+    @Test
+    public void PaddleResetSize() {
+        paddle1.addSize();
+        paddle1.resetSize();
+        assertEquals(100, paddle1.getSize());
+    }
+    
+    @Test
+    public void PaddleMoveSpeed() {
+        paddle1.speedDown();
+        paddle1.move(720);
+        assertEquals(1, paddle1.getSpeed());
     }
 }

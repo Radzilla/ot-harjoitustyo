@@ -1,19 +1,11 @@
 package fi.sillaras.functionality;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author sillaras
- */
 import fi.sillaras.components.Ball;
 import fi.sillaras.components.Paddle;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.BorderPane;
@@ -22,68 +14,96 @@ import javafx.scene.shape.Rectangle;
 import javafx.animation.AnimationTimer;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyAdapter;
-//import java.awt.Rectangle;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import javafx.scene.input.KeyCode;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class Pong extends Application {
+/**
+ * Scenes luokka huolehtii käyttöliittymän erilaisten näkyminen esittämisestä
+ * käyttäjälle ja luokassa on myös peliä ohjaava animation timer ja sen handle
+ * metodi. Animation timerin avulla Scenes tarkkailee pelin tilannetta joka 
+ * ruudunpäivityksessö ja vaihtaa tilanteesta riippuen näkymää ehtojen täyttyessä.
+ * Animation timer ohjaa myös pelivälineitä
+ * pelinäkymässä.
+ *
+ * @author sillaras
+ */
+public class Scenes extends Application {
+
+    public int round;
+    public String name;
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) throws Exception, IOException {
 
-        int x = 1280;
+        int x = 1080;
         int y = 720;
 
-        Pane screen = new Pane();
+        Pane gameScreen = new Pane();
+        gameScreen.setPrefSize(x, y);
 
-        screen.setPrefSize(x, y);
+        Scores scores = new Scores();
         Paddle paddle1 = new Paddle(10, y);
-        paddle1.setSpeed(1);
+        paddle1.addSpeed();
         Paddle paddle2 = new Paddle(x - 10, y);
         Ball ball1 = new Ball(10 + paddle1.getPower(), y / 2);
 
-        Scene scene = new Scene(screen);
         stage.setTitle("Score: " + paddle1.getScore() + " - " + paddle2.getScore());
+
+        Scene scene = new Scene(gameScreen);
 
         BorderPane instructionsScreen = new BorderPane();
         instructionsScreen.setPrefSize(x, y);
         Label instructionsLabel = new Label("Press UP and DOWN arrows to move paddle. \n"
                 + "Ball gets sideway movement from paddles movement so move paddle when ball touches it to start. \n"
                 + "Score point by hitting wall behind opposing paddle. \n"
-                + "After getting 3 points you can upgrade your paddle but only speed increse works at the moment");
-        Button okButton = new Button("Start game");
+                + "After getting 3 points you can upgrade your paddle but only speed increse works at the moment. ");
+        TextField nameField = new TextField();
+        Button okButton = new Button("Enter your player name (max 10 characters) and click to Start game");
         okButton.setOnAction((event) -> {
-            stage.setScene(scene);
+            if (nameField.getText().length() < 11 && nameField.getText().length() > 0) {
+                scores.setName(nameField.getText());
+                stage.setScene(scene);
+
+            } else {
+                okButton.setText("Invalid name! Try again");
+            }
+
         });
+
         instructionsScreen.setTop(instructionsLabel);
+        instructionsScreen.setLeft(nameField);
         instructionsScreen.setCenter(okButton);
         Scene instructionsScene = new Scene(instructionsScreen);
 
         stage.setScene(instructionsScene);
 
-        screen.getChildren().add(paddle1.getPaddle());
-        screen.getChildren().add(paddle2.getPaddle());
-        screen.getChildren().add(ball1.getBall());
+        gameScreen.getChildren().add(paddle1.getPaddle());
+        gameScreen.getChildren().add(paddle2.getPaddle());
+        gameScreen.getChildren().add(ball1.getBall());
 
         BorderPane optionScreen = new BorderPane();
         optionScreen.setPrefSize(x, y);
 
         Label victoryLabel = new Label("You won! Choose your reward.");
-
-        Button sizeButton = new Button("Increase size");
+        Button sizeButton = new Button("Increase power");
         sizeButton.setOnAction((event) -> {
-            //paddle1.setSize(100);
-            //paddle1.getPaddle().reshape(paddle1.getSize(), paddle1.getSize());
-            //screen.getChildren().remove(paddle1.getPaddle());
-            //screen.getChildren().add(paddle1.getPaddle());
+
+            paddle1.addPower();
+            paddle2.addPower();
+            stage.setTitle("Score: " + paddle1.getScore() + " - " + paddle2.getScore());
             stage.setScene(scene);
         });
 
         Button speedButton = new Button("Increase speed");
         speedButton.setOnAction((event) -> {
-            paddle1.setSpeed(1);
-            paddle2.setPower();
+            paddle1.addSpeed();
+            paddle2.addPower();
+            stage.setTitle("Score: " + paddle1.getScore() + " - " + paddle2.getScore());
             stage.setScene(scene);
         });
 
@@ -94,13 +114,17 @@ public class Pong extends Application {
 
         BorderPane lostScreen = new BorderPane();
         lostScreen.setPrefSize(x, y);
-        Label lostLabel = new Label("You lost! Press button to try again.");
+        Label highLabel = new Label("High Scores: ");
+        Label scoresLabel = new Label("");
+
         Button lostButton = new Button("Try again");
         lostButton.setOnAction((event) -> {
+            stage.setTitle("Score: " + paddle1.getScore() + " - " + paddle2.getScore());
             stage.setScene(scene);
         });
 
-        lostScreen.setTop(lostLabel);
+        lostScreen.setLeft(scoresLabel);
+        lostScreen.setTop(highLabel);
         lostScreen.setCenter(lostButton);
         Scene lostScene = new Scene(lostScreen);
 
@@ -150,14 +174,32 @@ public class Pong extends Application {
                     ball1.getBall().setTranslateX(-10);
                     ball1.ballSetSpeed(-ball1.getSpeedX(), 0);
                     if (paddle2.getScore() >= 3) {
-                        ball1.ballSetSpeed(0, 0);
+                        pressedButton.put(KeyCode.UP, Boolean.FALSE);
+                        pressedButton.put(KeyCode.DOWN, Boolean.FALSE);
+                        ball1.ballSetSpeed(2, 0);
                         ball1.getBall().setTranslateY(0);
+                        ball1.getBall().setTranslateX(0);
                         paddle1.getPaddle().setTranslateY(0);
                         paddle2.getPaddle().setTranslateY(0);
                         paddle2.setScore(0);
                         paddle1.setScore(0);
+                        paddle2.resetPower();
+                        paddle1.resetSize();
+                        paddle1.resetSpeed();
+                        try {
+                            scores.setScore();
+                        } catch (IOException ex) {
+                            Logger.getLogger(Scenes.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        scores.resetRound();
+
+                        try {
+                            scoresLabel.setText(scores.getScore());
+                        } catch (FileNotFoundException ex) {
+                            Logger.getLogger(Scenes.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         stage.setScene(lostScene);
-                        stage.show();
+
                     }
                 }
                 if (ball1.getBall().getTranslateX() > x) {
@@ -166,15 +208,19 @@ public class Pong extends Application {
 
                     ball1.getBall().setTranslateX(x);
                     ball1.ballSetSpeed(-ball1.getSpeedX(), 0);
-                    if (paddle1.getScore() >= 3) {
-                        ball1.ballSetSpeed(0, 0);
+                    if (paddle1.getScore() >= 1) {
+                        pressedButton.put(KeyCode.UP, Boolean.FALSE);
+                        pressedButton.put(KeyCode.DOWN, Boolean.FALSE);
+                        ball1.ballSetSpeed(2, 0);
                         ball1.getBall().setTranslateY(0);
+                        ball1.getBall().setTranslateX(0);
                         paddle1.getPaddle().setTranslateY(0);
                         paddle2.getPaddle().setTranslateY(0);
                         paddle2.setScore(0);
                         paddle1.setScore(0);
+                        scores.addRound();
                         stage.setScene(optionScene);
-                        stage.show();
+
                     }
                 }
 

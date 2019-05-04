@@ -1,14 +1,5 @@
 package fi.sillaras.components;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author sillaras
- */
 import javafx.scene.shape.Rectangle;
 import javafx.geometry.Point2D;
 
@@ -16,12 +7,11 @@ import javafx.animation.AnimationTimer;
 
 /**
  * Paddlen avulla luodaan pelaajien mailat ominaisuuksiseen ja se tarjoaa
- * metodit tiedon välittämiseksi myös itse sovelluslogiikalle
+ * metodit tiedon välittämiseksi myös Scenes luokalle
  */
 public class Paddle {
 
     private Rectangle paddle;
-
     private Point2D movement;
     private int size, power, acceleration, speed, posX, posY, height, score;
 
@@ -55,6 +45,11 @@ public class Paddle {
         return this.paddle;
     }
 
+    /**
+     * Mailoilla on eri arvoille (score,size,power,speed) omat getterit
+     *
+     * @return palauttaa halutun arvon
+     */
     public int getScore() {
         return this.score;
     }
@@ -70,22 +65,41 @@ public class Paddle {
     public int getSpeed() {
         return this.speed;
     }
-    
-    public void setPower() {
+
+    /**
+     * Mailan eri ominaisuuksia(power,size,speed) voidaan myös kasvattaa
+     */
+    public void addPower() {
         this.power++;
     }
 
-    public void setSize(int change) {
-        this.size = this.size + change;
+    /**
+     * Ominaisuudet (power,size,speed) voidaan myös palauttaa oletusarvoihin
+     */
+    public void resetPower() {
+        this.power = 3;
     }
 
-    public void setSpeed(int change) {
-        this.acceleration = this.acceleration + change;
+    public void addSize() {
+        this.size = this.size + 20;
+    }
+
+    public void resetSize() {
+        this.size = 100;
+    }
+
+    public void addSpeed() {
+        this.acceleration++;
+    }
+
+    public void resetSpeed() {
+        this.acceleration = 3;
     }
 
     public void setScore(int score) {
         this.score = score;
     }
+
     /**
      * Metodi kiihdyttää mailoja ylöspäin
      */
@@ -106,7 +120,8 @@ public class Paddle {
      * Paddlen metodi move liikuttaa mailoja annetujen komentojen perusteellaa
      * ja tarkistaa etteivät mailat pääse peliruudun ulkopuoelle
      *
-     * @param y parametrina saadaan peliruudun korkeus
+     * @param y parametrina saadaan peliruudun korkeus, millä asetetaan rajat
+     * liikkeelle
      */
     public void move(int y) {
 

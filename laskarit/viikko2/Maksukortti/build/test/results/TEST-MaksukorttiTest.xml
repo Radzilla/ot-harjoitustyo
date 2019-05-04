@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="lx8-fuxi138" name="MaksukorttiTest" skipped="0" tests="7" time="0.043" timestamp="2019-03-26T12:03:16">
+<testsuite errors="0" failures="0" hostname="lx8-fuxi138" name="MaksukorttiTest" skipped="0" tests="7" time="0.05" timestamp="2019-05-01T09:30:57">
   <properties>
     <property name="netbeans.autoupdate.country" value="GB" />
     <property name="nb.wait.for.caches" value="true" />
@@ -39,7 +39,7 @@
     <property name="user.name" value="sillaras" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner MaksukorttiTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/sillaras/ot-harjoitustyo/laskarit/viikko2/Maksukortti/build/test/results/TEST-MaksukorttiTest.xml crashfile=/home/sillaras/ot-harjoitustyo/laskarit/viikko2/Maksukortti/build/junitvmwatcher1308689760247319077.properties propsfile=/home/sillaras/ot-harjoitustyo/laskarit/viikko2/Maksukortti/build/junit9064787717772905151.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner MaksukorttiTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/sillaras/ot-harjoitustyo/laskarit/viikko2/Maksukortti/build/test/results/TEST-MaksukorttiTest.xml crashfile=/home/sillaras/ot-harjoitustyo/laskarit/viikko2/Maksukortti/build/junitvmwatcher5915040526916213222.properties propsfile=/home/sillaras/ot-harjoitustyo/laskarit/viikko2/Maksukortti/build/junit1457564963916703786.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="build.sysclasspath" value="ignore" />
     <property name="manifest.encoding" value="UTF-8" />
@@ -73,7 +73,7 @@
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value=":build/classes:/usr/share/tmcbeans/platform/modules/ext/junit-4.12.jar:/usr/share/tmcbeans/platform/modules/ext/hamcrest-core-1.3.jar" />
-    <property name="netbeans.buildnumber" value="1.2.0" />
+    <property name="netbeans.buildnumber" value="1.2.4" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="javax.accessibility.assistive_technologies" value="org.GNOME.Accessibility.AtkWrapper" />
     <property name="build.generated.sources.dir" value="build/generated-sources" />
@@ -306,10 +306,10 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit" />
   </properties>
-  <testcase classname="MaksukorttiTest" name="konstruktoriAsettaaSaldonOikein" time="0.003" />
+  <testcase classname="MaksukorttiTest" name="konstruktoriAsettaaSaldonOikein" time="0.002" />
   <testcase classname="MaksukorttiTest" name="syoEdullisestiEiVieSaldoaNegatiiviseksi" time="0.0" />
   <testcase classname="MaksukorttiTest" name="kortinSaldoEiYlitaMaksimiarvoa" time="0.0" />
-  <testcase classname="MaksukorttiTest" name="hello" time="0.001" />
+  <testcase classname="MaksukorttiTest" name="hello" time="0.0" />
   <testcase classname="MaksukorttiTest" name="syoEdullisestiVahentaaSaldoaOikein" time="0.0" />
   <testcase classname="MaksukorttiTest" name="syoMaukkaastiVahentaaSaldoaOikein" time="0.0" />
   <testcase classname="MaksukorttiTest" name="kortilleVoiLadataRahaa" time="0.0" />
