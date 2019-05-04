@@ -40,7 +40,7 @@ Generoi hakemistoon target/site/jacoco tiedoston index.html mistä voidaan tarka
 ```
 mvn package
 ```
-generoi hakemistoon target suoritettavan jar tiedoston Pong-1.0-SNAPSHOT.jar
+Generoi hakemistoon target suoritettavan jar tiedoston Pong-1.0-SNAPSHOT.jar
 
 ## Checkstyle
 
