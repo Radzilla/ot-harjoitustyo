@@ -82,9 +82,8 @@ public class Scores {
      * @throws FileNotFoundException
      */
     public String getScore() throws FileNotFoundException, IOException {
-        int top = 0;
-        StringBuilder scoreString = new StringBuilder();
 
+        StringBuilder scoreString = new StringBuilder();
         Properties properties = new Properties();
         properties.load(new FileInputStream("config.properties"));
         File file = new File(properties.getProperty("highScoreFile"));
@@ -98,6 +97,7 @@ public class Scores {
             for (int i = 0; i < allScores.size() && i < 5; i++) {
                 scoreString.append(allScores.get(i) + "\n");
             }
+            allScores.clear();
             String highScores = scoreString.toString();
             return highScores;
         }

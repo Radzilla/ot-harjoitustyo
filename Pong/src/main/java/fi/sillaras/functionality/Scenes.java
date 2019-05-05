@@ -60,7 +60,7 @@ public class Scenes extends Application {
         Label instructionsLabel = new Label("Press UP and DOWN arrows to move paddle. \n"
                 + "Ball gets sideway movement from paddles movement so move paddle when ball touches it to start. \n"
                 + "Score point by hitting wall behind opposing paddle. \n"
-                + "After getting 3 points you can upgrade your paddle but only speed increse works at the moment. ");
+                + "After getting 3 points you can upgrade your paddles speed or power ");
         TextField nameField = new TextField();
         Button okButton = new Button("Enter your player name (max 10 characters) and click to Start game");
         okButton.setOnAction((event) -> {
@@ -182,9 +182,11 @@ public class Scenes extends Application {
                         paddle2.getPaddle().setTranslateY(0);
                         paddle2.setScore(0);
                         paddle1.setScore(0);
+                        paddle1.resetPower();
                         paddle2.resetPower();
                         paddle1.resetSize();
                         paddle1.resetSpeed();
+                        paddle1.addSpeed();
                         try {
                             scores.setScore();
                         } catch (IOException ex) {
@@ -203,13 +205,13 @@ public class Scenes extends Application {
 
                     }
                 }
-                if (ball1.getBall().getTranslateX() > x) {
+                if (ball1.getBall().getTranslateX() > x - 10) {
                     paddle1.setScore(paddle1.getScore() + 1);
                     stage.setTitle("Score: " + paddle1.getScore() + " - " + paddle2.getScore());
 
-                    ball1.getBall().setTranslateX(x);
+                    ball1.getBall().setTranslateX(x - 10);
                     ball1.ballSetSpeed(-ball1.getSpeedX(), 0);
-                    if (paddle1.getScore() >= 1) {
+                    if (paddle1.getScore() >= 3) {
                         pressedButton.put(KeyCode.UP, Boolean.FALSE);
                         pressedButton.put(KeyCode.DOWN, Boolean.FALSE);
                         ball1.ballSetSpeed(2, 0);
