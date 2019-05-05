@@ -28,13 +28,13 @@ Pelattavaa peliruutua käytetään nuolinäppäinten avulla.
 
 ## Sovelluslogiikka
 
-Luokka Pong vastaa käyttöliittymän erilaisten näkymien luonnista ja näyttämisestä käyttäjälle, sekä niiden välillä siirtymisestä. 
+Luokka Scenes vastaa käyttöliittymän erilaisten näkymien luonnista ja näyttämisestä käyttäjälle, sekä niiden välillä siirtymisestä. 
 
-Pong pystyy myös luomaan ja muuttamaan pallon ja pelaajien mailojen tietoja, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit muotoina. Alla olevassa kuvassa oleva sekvenssikaavio esittää peliruudun luomista.
+Scenes pystyy myös luomaan ja muuttamaan pallon ja pelaajien mailojen tietoja niiden metodien avulla, sekä myös luomaan niiden perusteella peliruutuun tarvittavat komponentit muotoina. Alla olevassa kuvassa oleva sekvenssikaavio esittää peliruudun luomista.
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pelinakyma_Sekvenssi.PNG">
 
-Pong luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa peliruudun luomisen yhteydessä luotuja komponentteja peliruudussa niiden metodien avulla kymmeniä kertoja sekunnissa. Handle myös tarkkailee joka ruudussa ehtoja, joiden täyttyessä lasketaan pisteitä ja vaihdetaan näkymää.
+Scenes luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa peliruudun luomisen yhteydessä luotuja komponentteja peliruudussa niiden metodien avulla kymmeniä kertoja sekunnissa. Handle myös tarkkailee joka ruudussa ehtoja, joiden täyttyessä lasketaan pisteitä ja vaihdetaan näkymää.
 
 ## Luokat
 
