@@ -13,5 +13,5 @@
 | 02.5. | 4    | Käyty ajamssa päivitykset. JavaFX korjaantui ja NetBeanssin java versio vaihtamalla mavenkin toimii|
 | 03.5. | 4    | Pongiin lisätty tiedostoon tallentava Scores luokka. Pelin nollaantumista häviön jälkeen paranneltu|
 | 04.5. | 4    | Tiedon tallentamisen muutos konfiguraation määrrittelemäksi. Testien lisääminen ja pähkäily|
-| 05.5. | 6    | Konfiguraation toiminnan selvittäminen. Bugien korjailua sovelluksessa ja dokumentaation päivitys. Realease|
+| 05.5. | 6    | Konfiguraation toiminnan selvittäminen. Bugien korjailua sovelluksessa ja dokumentaation päivitys. Release|
 | yht | 50 | | 
