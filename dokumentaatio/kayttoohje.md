@@ -1,7 +1,7 @@
 # Kayttöohjeet 
 
-Tallenna tiedostot [Pong](https://github.com/Radzilla/ot-harjoitustyo/releases/download/v1.1/Pong-v1.1.jar) 
-sekä [Configuration.properties](https://github.com/Radzilla/ot-harjoitustyo/releases/download/v1.1/config.properties)
+Tallenna tiedostot [Pong](https://github.com/Radzilla/ot-harjoitustyo/releases/download/1.1/Pong-v1.1.jar) 
+sekä [Configuration.properties](https://github.com/Radzilla/ot-harjoitustyo/releases/download/1.1/config.properties)
 samaan sijaintiin jos haluat huipputulosten toimivan. Tällöin luodaan myös tiedosto HighScores.txt pelin päättyessä.
 
 ## Ohjelman käynnistäminen
