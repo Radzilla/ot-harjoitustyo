@@ -20,7 +20,7 @@ Jatkettu versio klassikkopelistä Pong
 
 [Pong v1.0 Viikko 5](https://github.com/Radzilla/ot-harjoitustyo/releases)
 
-[Pong v1.1 Viikko 7](https://github.com/Radzilla/ot-harjoitustyo/releases/tag/v1.1)
+[Pong v1.1 Viikko 7](https://github.com/Radzilla/ot-harjoitustyo/releases/tag/1.1)
 
 
 ## Komentorivitoiminnot
