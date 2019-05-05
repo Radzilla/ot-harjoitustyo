@@ -7,7 +7,7 @@ Ohjelman rakenteessa on vain pakkaukset fi.sillaras.funktionality ja fi.sillaras
 
 Paukkauksessa fi.sillaras.funktionality on sovelluksen käyttäliittymän ja sovelluslogikkan toteuttava luokka Scenes, sekä pisteiden laskusta ja huipputuloksien esityksestä huolehtiva luokka Scores
 
-Paukkauksessa fi.sillaras.components sisältää luokat Paddle ja Ball, jotka huolehtivat pelivälineiden luonnista ja tuonnista peliruutuun.
+Paukkauksessa fi.sillaras.components sisältää luokat Paddle ja Ball, jotka huolehtivat pelivälineiden luonnista, ominaisuuksista ja tuonnista peliruutuun.
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pong_Luokkakaavio.png">
 Kuvassa on alkuperäinen ajatus luokkien rakenteesta. Screensin nimi on vaihdettu Scenesiksi ja luokka Scores lisätty valmiissa sovelluksessa.
