@@ -40,16 +40,26 @@ Pong luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuo
 
 ### Scenes
 
+Huolehtii erilaisten näkymien näyttämisestä ja myös pelin komponenttien ohjaamisesta 
+
 ### Scores
+
+Huolehtii HighScore listan ylläpidosta ja palautuksesta näkyviin Scenesille String muodossa.
 
 ### Ball 
 
+Ball luokkan olioon on tallennettu palloon liittyvät ominaisuudet kuten X ja Y suuntaiset nopeudet, kierre ja pallolla on myös metodi millä tarkastetaan sen osuminen mailoihin. Scenes luokan animation timerin handle hyödyntää näitä. 
+
 ### Paddle
+
+Paddle oliot luodaan kummallekkin pleaajalle ja oliolla on tiedo mailan ominaisuuksista ja kuten voimasta ja leveydestä, mutta myös mailan kiihtyvyydestä ja nopeudesta. Scenes luokan animation timern handle hyödyntää tietoa mailojen nopeudesta liikutellessaan niitä peliruudussa.
 
 ## Ongelmat koodissa
 
-Käyttöliittymää ja sovelluslogiikaa ei olla saatu eroteltua toistaan, sillä näkyminen ohjaaminen ja animation timerin käyttö tätä varten itse luodun Scenes luokan kautta osoittautui liian monimutkaiseksi. Näin ollen suuri osa koodista jäi useamman metodin sijaan pitkäksi kokonaisuudeksi.
+Käyttöliittymää ja sovelluslogiikaa ei olla saatu kokonaan eroteltua toistaan, sillä näkyminen ohjaaminen ja animation timerin käyttö tätä varten luodun luokan kautta osoittautui liian monimutkaiseksi. Näin ollen suuri osa koodista jäi useamman metodin sijaan pitkäksi kokonaisuudeksi Scenes luokkaan.
 
-Vastustajan muuttaminen erkittävästi erilaiseksi ei oikein toimi, sillä jos vastustajan maila on kovin nopea tai leveä, pisteiden tekemisestä tulee mahdotonta. Vastustajan voimaa kasvattamalla saadaan kuitenkin hyvää lisähaastetta pallon ja sitä kautta pelin nopeutuessa.
+Vastustajan muuttaminen erkittävästi erilaiseksi ei oikein toimi, sillä jos vastustajan maila on kovin nopea tai leveä, pisteiden tekemisestä tulee mahdotonta. Vastustajan voimaa kasvattamalla saadaan kuitenkin hyvää lisähaastetta pallon ja sitä kautta pelin nopeutuessa. 
 
-Pallon nopeuden muuttuminen kierteen perusteella toimii, mutta ainakin int arvoilla Y suuntaisen nopeuden kasvu on liian nopeaa, ellei sitä rajoiteta. Animation timerin ruudunpäivitysnopeutta saisi varmaan hidastettua, mutta pelin sulavuus kärsisi.
+Mailan leveyden muutosta ei onnistuttu päivittämämään peliruutun, joten ainoastaan voimaa ja nopeutta voidaan kasvattaa.
+
+Pallon kiihtyminen kierteen perusteella toimii, mutta ainakin int arvoilla Y suuntaisen nopeuden kasvu on liian nopeaa, ellei sitä rajoiteta. 
