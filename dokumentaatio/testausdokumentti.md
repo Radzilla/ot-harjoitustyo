@@ -2,8 +2,18 @@
 
 ## Sovelluslogiikka
 
-Testejä on tehty ruudun komponenttien luomiselle ja käsittelylle, Animation timerin hyödyntämille metodeille.
+Peliruudut luova Scenes olio ja pisteiden sovelluslogiikasta huolehtiva Scores jätettiin testien ulkopuolle jottei sekoita tuloslistaa.
+Testejä on tehty ruudun komponenttien luomiselle ja niiden arvojen käsittelylle. JavaFX toimintojen testaus ei kuitenkaan sujunut ja testikattavuus jäi etenkin Ball luokan osalta huonolle tasolle.
 
 ## Järjestelmätestaus
 
-Sovellukset toimivuuden kokeilua on suoritettu manuaalisesti kehitysvaiheessa ja sovelluksen valmistuttua.
+### Asennus
+
+Sovelluksen Pong-v1.1.jar sekä configuration.properties on haettu repositorion uusimmasta releasesta ja kokeiltu kahdella tietokoneella joista toisessa on käyttöjärjestelmänä Windows ja toisessa Linux. 
+HighScores.txt luominen toimii jos sitä ei ole ja sitä editoidaan oikein jos se onkin olemassa. Tiedostoa editoimalla voi sekoittaa huipputlosruutua.
+Sovellus toimii myös ilman configuration.properties tiedostoa, mutta huipputulosten seuranta ei tällöin toimi. 
+
+### Toiminnallisuus
+
+Sovellukset toimivuuden kokeilua on suoritettu manuaalisesti kehitysvaiheessa ja sovelluksen valmistuttua. Kaikkia mahdollisia painikkeita ollaan yritetty painaa ja käyttäjä käsiksi ei pääse sovellukseen juuri muuten käsikisi kuin nimimerkin syötössä ja virheelliset syötteet huomataan hyvin.
+
