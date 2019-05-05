@@ -56,7 +56,7 @@ Paddle oliot luodaan kummallekkin pleaajalle ja oliolla on tiedo mailan ominaisu
 
 ## Ongelmat koodissa
 
-Käyttöliittymää ja sovelluslogiikaa ei olla saatu kokonaan eroteltua toistaan, sillä näkyminen ohjaaminen ja animation timerin käyttö tätä varten luodun luokan kautta osoittautui liian monimutkaiseksi. Näin ollen suuri osa koodista jäi useamman metodin sijaan pitkäksi kokonaisuudeksi Scenes luokkaan.
+Käyttöliittymää ja sovelluslogiikaa ei olla saatu kokonaan eroteltua toistaan. Tarkoituksena oli tehdä jokaisesta näkymästä oma luokka tai edes metodi erilliseen luokkaan, mutta näkyminen ohjaaminen ja animation timerin käyttö tätä varten luodun luokan kautta osoittautui liian monimutkaiseksi. Näin ollen suuri osa koodista jäi useamman metodin sijaan pitkäksi kokonaisuudeksi Scenes luokkaan.
 
 Vastustajan muuttaminen erkittävästi erilaiseksi ei oikein toimi, sillä jos vastustajan maila on kovin nopea tai leveä, pisteiden tekemisestä tulee mahdotonta. Vastustajan voimaa kasvattamalla saadaan kuitenkin hyvää lisähaastetta pallon ja sitä kautta pelin nopeutuessa. 
 
