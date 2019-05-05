@@ -52,7 +52,7 @@ Ball luokkan olioon on tallennettu palloon liittyvät ominaisuudet kuten X ja Y 
 
 ### Paddle
 
-Paddle oliot luodaan kummallekkin pleaajalle ja oliolla on tiedo mailan ominaisuuksista ja kuten voimasta ja leveydestä, mutta myös mailan kiihtyvyydestä ja nopeudesta. Scenes luokan animation timern handle hyödyntää tietoa mailojen nopeudesta liikutellessaan niitä peliruudussa.
+Paddle oliot luodaan kummallekkin pelaajalle ja oliolla on tiedo mailan ominaisuuksista ja kuten voimasta ja leveydestä, mutta myös mailan kiihtyvyydestä ja nopeudesta. Scenes luokan animation timern handle hyödyntää tietoa mailojen nopeudesta liikutellessaan niitä peliruudussa.
 
 ## Ongelmat koodissa
 
