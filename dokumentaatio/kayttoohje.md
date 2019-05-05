@@ -6,7 +6,7 @@ samaan sijaintiin jos haluat huipputulosten toimivan. Tällöin luodaan myös ti
 
 ## Ohjelman käynnistäminen
 
-Ohjelman voi avata tuplaklikkaamalla ladattua Pong-v1.1.jar tiedostoa tai komennolla java -jar Pong-v1.1.jar
+Ohjelman voi avata tuplaklikkaamalla ladattua Pong-v1.1.jar tiedostoa tai terminaalin komennolla java -jar Pong-v1.1.jar tiedoston hakemistossa.
 
 
 
