@@ -46,6 +46,7 @@ public class Ball {
 
     /**
      * Palauttaa pallon sivusuuntaisen nopeuden
+     *
      * @return sivusuuntainen nopeus
      */
     public int getSpeedX() {
@@ -94,8 +95,8 @@ public class Ball {
             this.ball.setTranslateY(-y / 2);
             this.rotation = -this.rotation;
         }
-        if (this.ball.getTranslateY() >= y / 2 - 10) {
-            this.ball.setTranslateY(y / 2 - 10);
+        if (this.ball.getTranslateY() >= y / 2 - 5) {
+            this.ball.setTranslateY(y / 2 - 5);
             this.rotation = -this.rotation;
         }
     }

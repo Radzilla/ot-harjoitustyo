@@ -7,7 +7,9 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
 
 /**
  * Scores luokka huolehtii voitettujen vastustajien määrästä ja pelin päätyttyä
@@ -58,7 +60,11 @@ public class Scores {
      * @throws IOException
      */
     public void setScore() throws IOException {
-        File file = new File("HighScore.txt");
+
+        Properties properties = new Properties();
+        properties.load(new FileInputStream("config.properties"));
+        File file = new File(properties.getProperty("highScoreFile"));
+
         FileWriter fileW = new FileWriter(file, true);
         try (BufferedWriter bufferedW = new BufferedWriter(fileW)) {
             bufferedW.write(this.round + " - " + this.name + "\n");
@@ -75,10 +81,15 @@ public class Scores {
      * @return 5 parasta pelaaja yhtenä Stringinä
      * @throws FileNotFoundException
      */
-    public String getScore() throws FileNotFoundException {
+    public String getScore() throws FileNotFoundException, IOException {
         int top = 0;
         StringBuilder scoreString = new StringBuilder();
-        try (Scanner scanner = new Scanner(new File("HighScore.txt"))) {
+
+        Properties properties = new Properties();
+        properties.load(new FileInputStream("config.properties"));
+        File file = new File(properties.getProperty("highScoreFile"));
+
+        try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 allScores.add(scanner.nextLine());
             }

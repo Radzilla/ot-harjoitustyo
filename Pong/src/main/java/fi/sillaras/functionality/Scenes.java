@@ -25,10 +25,9 @@ import java.util.logging.Logger;
 /**
  * Scenes luokka huolehtii käyttöliittymän erilaisten näkyminen esittämisestä
  * käyttäjälle ja luokassa on myös peliä ohjaava animation timer ja sen handle
- * metodi. Animation timerin avulla Scenes tarkkailee pelin tilannetta joka 
- * ruudunpäivityksessö ja vaihtaa tilanteesta riippuen näkymää ehtojen täyttyessä.
- * Animation timer ohjaa myös pelivälineitä
- * pelinäkymässä.
+ * metodi. Animation timerin avulla Scenes tarkkailee pelin tilannetta joka
+ * ruudunpäivityksessö ja vaihtaa tilanteesta riippuen näkymää ehtojen
+ * täyttyessä. Animation timer ohjaa myös pelivälineitä pelinäkymässä.
  *
  * @author sillaras
  */
@@ -196,6 +195,8 @@ public class Scenes extends Application {
                         try {
                             scoresLabel.setText(scores.getScore());
                         } catch (FileNotFoundException ex) {
+                            Logger.getLogger(Scenes.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (IOException ex) {
                             Logger.getLogger(Scenes.class.getName()).log(Level.SEVERE, null, ex);
                         }
                         stage.setScene(lostScene);
