@@ -14,7 +14,7 @@ Jatkettu versio klassikkopelistä Pong
 
 [Testausdokumentti](https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
 
-[JavaDocin generoimat] (https://github.com/Radzilla/ot-harjoitustyo/tree/master/dokumentaatio/JavaDocs)
+[JavaDocit](https://github.com/Radzilla/ot-harjoitustyo/tree/master/dokumentaatio/JavaDocs)
 
 ## Releaset
 
