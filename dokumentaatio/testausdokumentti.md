@@ -3,7 +3,7 @@
 ## Sovelluslogiikka
 
 Peliruudut luova Scenes olio ja pisteiden sovelluslogiikasta huolehtiva Scores jätettiin testien ulkopuolle jottei sekoita tuloslistaa.
-Testejä on tehty ruudun komponenttien luomiselle ja niiden arvojen käsittelylle. JavaFX toimintojen testaus ei kuitenkaan sujunut ja testikattavuus jäi etenkin Ball luokan osalta huonolle tasolle.
+Testejä on tehty ruudun komponenttien luomiselle ja niiden arvojen käsittelylle. JavaFXn peliruudun ohjaamiseen käytettävien toimintojen testaus ei kuitenkaan sujunut ja testikattavuus jäi etenkin haarautumiskattavuuden osalta huonolle tasolle.
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/jacoco_raportti.png">
 
