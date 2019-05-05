@@ -34,13 +34,13 @@ Pong pystyy myös luomaan ja muuttamaan pallon ja pelaajien mailojen tietoja, se
 
 <img src="https://github.com/Radzilla/ot-harjoitustyo/blob/master/dokumentaatio/kuvat/Pelinakyma_Sekvenssi.PNG">
 
-Pong luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa peliruudun luomisen yhteydessä luotuja komponentteja peliruudussa ohjeistetulla tavalla kymmeniä kertoja sekunnissa. 
+Pong luokassa on myös AnimationTimerin sisällä handle metodi, joka seuraa nuolinäppäinten painallusta ja pallon sijaintia vastustajan "tekoälyn" mailaan. Handle liikuttaa peliruudun luomisen yhteydessä luotuja komponentteja peliruudussa niiden metodien avulla kymmeniä kertoja sekunnissa. Handle myös tarkkailee joka ruudussa ehtoja, joiden täyttyessä lasketaan pisteitä ja vaihdetaan näkymää.
 
 ## Luokat
 
 ### Scenes
 
-Huolehtii erilaisten näkymien näyttämisestä ja myös pelin komponenttien ohjaamisesta 
+Huolehtii erilaisten näkymien näyttämisestä ja myös pelin komponenttien ohjaamisesta.
 
 ### Scores
 
