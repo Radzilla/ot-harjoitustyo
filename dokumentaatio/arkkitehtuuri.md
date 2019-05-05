@@ -62,4 +62,4 @@ Vastustajan muuttaminen erkittävästi erilaiseksi ei oikein toimi, sillä jos v
 
 Mailan leveyden muutosta ei onnistuttu päivittämämään peliruutun, joten ainoastaan voimaa ja nopeutta voidaan kasvattaa.
 
-Pallon kiihtyminen kierteen perusteella toimii, mutta ainakin int arvoilla Y suuntaisen nopeuden kasvu on liian nopeaa, ellei sitä rajoiteta. 
+Pallon kiihtyminen kierteen perusteella toimii, mutta ainakin int arvoilla Y suuntaisen nopeuden kasvu on liian nopeaa, ellei sitä rajoiteta. Myös mailojen kiihtyminen maksinopeuteensa käy nopeasti samasta syystä.
